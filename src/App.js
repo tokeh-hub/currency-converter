@@ -1,7 +1,7 @@
 import './App.css';
 import React,{useEffect,useState} from 'react';
 import Currency from './Currency';
-console.log(process.env)
+
 function App() {
   
      const[currencies,setCurrencies] = useState([])
@@ -21,7 +21,7 @@ function App() {
        toAmount = amount;
        fromAmount = (amount / exchangeRate).toFixed(2)
      }
-  
+  console.log(process.env)
      const funct = () =>{
       const axios = require('axios');
       axios.get(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${process.env.REACT_APP_RAPID_API_KEY}&base=USD`)
