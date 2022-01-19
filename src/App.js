@@ -1,7 +1,7 @@
 import './App.css';
 import React,{useEffect,useState} from 'react';
 import Currency from './Currency';
-
+console.log(process.env)
 function App() {
   
      const[currencies,setCurrencies] = useState([])
