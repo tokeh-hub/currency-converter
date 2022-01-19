@@ -24,7 +24,7 @@ function App() {
   console.log(process.env)
      const funct = () =>{
       const axios = require('axios');
-      axios.get(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${process.env.REACT_APP_RAPID_API_KEY}&base=USD`)
+      axios.get(`https://exchange-rates.abstractapi.com/v1/live/?api_key=95a1f5104fc8442f8eaeaf50534ccdab&base=USD`)
     .then(response => {
         console.log(response.data);
         const firstCurrency = Object.keys(response.data.exchange_rates)[0]
@@ -48,7 +48,7 @@ function App() {
   useEffect(()=>{
     if(fromCurrency!=null && toCurrency!=null){
       const axios = require('axios');
-      axios.get(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${process.env.REACT_APP_RAPID_API_KEY}&base=${fromCurrency}&target=${toCurrency}`)
+      axios.get(`https://exchange-rates.abstractapi.com/v1/live/?api_key=95a1f5104fc8442f8eaeaf50534ccdab&base=${fromCurrency}&target=${toCurrency}`)
           .then(response => {
               console.log(response.data);
               setExchangeRate(response.data.exchange_rates[toCurrency])
